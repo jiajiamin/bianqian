@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a href="index.html"> 第二个页面</a>
+    <button>后退</button>
+    <button>前进</button>
+    <button>刷新</button>
+</body>
+</html>
+<script>
+    let back=document.getElementsByTagName("button")[0];
+    let forword=document.getElementsByTagName("button")[1];
+    let refresh=document.getElementsByTagName("button")[2];
+    alert(history.length);
+    back.onclick=function () {
+        history.back();
+    }
+    forword.onclick=function () {
+        history.forward();
+    }
+    refresh.onclick=function () {
+        history.go(0);
+    }
+</script>
